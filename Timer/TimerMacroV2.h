@@ -42,7 +42,7 @@ TIMER_ ## tsName ## _timeStamp = millis();
 #define TIME_ELAPSED(tsName) (millis() - TIMER_ ## tsName ## _timeStamp)
 
 //  return true if time has elapsed for given amount
-#define IS_TIME_ELAPSED(tsName, time_elapsed_ms) (TIMER_TIME_ELAPSED(tsName) >= time_elapsed_ms)
+#define IS_TIME_ELAPSED(tsName, time_elapsed_ms) (TIMER_ ## tsName ## _timeStamp + TIME_ELAPSED <= millis())
 
 
 #endif  //  __TIMER_MACRO_V2
