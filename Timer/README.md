@@ -121,9 +121,23 @@ This timer library is passive, i.e., ``preDueEvent`` and ``postDueEvent`` will b
 - ``Arduino.h``, only ``millis()`` is needed
 - The library is developed with C++11 preprocessor and tested using C++ compiler. However, it *should* be compatible with C (NOT TESTED). 
 
+## V2 
+
+Simplified version with commonly used functions
+
+```C++
+CREATE_TIMER(tsName)
+
+RESET_TIMER(tsName)
+TIME_ELAPSED(tsName)
+IS_TIME_ELAPSED(tsName, time_elapsed_ms)
+```
+
 ***
 ## Update History
 - Oct 10, 2021
   - Added basic functionalities Time Stamp
 - Jan 4, 2022
   - Added `TS_TIME_ELAPSED_MS(tsName)` function
+- Oct 10, 2025
+  - Added V2

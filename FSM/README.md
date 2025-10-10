@@ -216,7 +216,7 @@ void loop() {
 }
 
 void blink_update() {
-  SETUP_FSM(BLINK);
+  SETUP_FSM_FUNCTION(BLINK);
 
   STATE(0) {
     pinMode(PIN_LED_BUILTIN, OUTPUT);
@@ -312,6 +312,8 @@ void loop() {
 #define A_ (digitalRead(12) != 0)
 
 fsm1_update() {
+  SETUP_FSM_FUNCTION(fsm1)
+
   STATE(0) {
     pinMode(13, OUTPUT);        // onboard LED
     pinMode(12, INPUT_PULLUP);  // input button
